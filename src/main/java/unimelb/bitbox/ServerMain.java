@@ -27,7 +27,7 @@ public class ServerMain implements FileSystemObserver {
         fileSystemManager = new FileSystemManager(Configuration.getConfigurationValue("path"), this);
         //get configuration
         Map<String, String> configuration = Configuration.getConfiguration();
-
+        // sdfsdf
         //connect to other peers
         try {
             String[] peers = configuration.get("peers").split(",");
@@ -38,6 +38,7 @@ public class ServerMain implements FileSystemObserver {
                 hostPorts.add(hostPort);
                 connectToPeer(hostPort, local, fileSystemManager);
             }
+
 
             //start Server
             new Thread(new Runnable() {
